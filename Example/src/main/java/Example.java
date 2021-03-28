@@ -13,8 +13,14 @@ import org.apache.http.util.EntityUtils;
 
 public class Example {
   public static void main(String[] args) {
+    String apiKey = "";
+    String urlTemplate = "api.openweathermap.org/data/2.5/weather?id={city id}&appid={API key}";
     Map<String, String> headers = new HashMap<>();
-    String url = "https://youtube.com";
+    String url = urlTemplate
+        .replace("{city id}", "")
+        .replace("{API key}", apiKey);
+
+
     String response = get(url, headers);
     System.out.println(response);
   }
