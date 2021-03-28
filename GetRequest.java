@@ -6,7 +6,7 @@
                 public String handleResponse(final HttpResponse response) throws ClientProtocolException, IOException {
 
                     int status = response.getStatusLine().getStatusCode();
-                    if (status <= 200 && status < 300) {
+                    if (status >= 200 && status < 300) {
                         HttpEntity entity = response.getEntity();
                         return entity != null ? EntityUtils.toString(entity) : null;
                     }
