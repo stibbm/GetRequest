@@ -17,7 +17,7 @@ public class Example {
     String urlTemplate = "api.openweathermap.org/data/2.5/weather?id={city id}&appid={API key}";
     Map<String, String> headers = new HashMap<>();
     String url = urlTemplate
-        .replace("{city id}", "")
+        .replace("{city id}", "833")
         .replace("{API key}", apiKey);
 
 
